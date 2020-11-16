@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import BigNum from "./BigNum";
+import Keyboard from "./Keyboard"
+import KeyboardInput from "./KeyboardInput"
+import MainMenu from './MainMenu';
+import GameStats from "./GameStats";
+import Alert from 'react-bootstrap/Alert';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainMenu />
+      <GameStats />
+
+      <Alert variant="success">That is corect!</Alert>
+
+      <BigNum />
+      <KeyboardInput />
+      <Keyboard />
     </div>
   );
 }
