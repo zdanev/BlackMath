@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 const MainMenu = () => {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">Prime Factors</Navbar.Brand>
+            <Navbar.Brand href="/">Black Math</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

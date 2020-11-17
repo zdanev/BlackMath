@@ -10,3 +10,8 @@
 .Keyboard button { padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; margin: 5px; }
 .BottomDrawer { position: absolute; bottom: 0px; width: 100%; padding: 10px; text-align: center; }
 .alert { margin: 10px; }
+
+body {
+    background-image: url("resources/numbers-background.png");
+    background-color: #cccccc;
+   }
