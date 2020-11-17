@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface GameStatsProps {
-    time: string;
-    points: string;
+    time: number;
+    points: number;
 }
 
 const GameStats = (props: GameStatsProps) => {

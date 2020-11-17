@@ -7,31 +7,51 @@ import KeyboardInput from "./KeyboardInput"
 import MainMenu from './MainMenu';
 import GameStats from "./GameStats";
 import Alert from 'react-bootstrap/Alert';
+import Button from "react-bootstrap/esm/Button";
 
 const App = () => {
 
   const [message, setMessage] = useState<string>("Let's play a game of prime factors...");
   const [variant, setVariant] = useState<string>("info");
-
-  const [num, setNum] = useState<string>("36");
+  const [num, setNum] = useState<number>(getRandomInt(100));
   const [input, setInput] = useState<string>("= ");
   const [canSubmit, setCanSubmit] = useState<boolean>(false);
+  const [isGameOver, setIsGameOver] = useState<boolean>(false);
+  const [points, setPoints] = useState<number>(0);
+
+  function restart() {
+    setMessage("Let's play a game of prime factors...");
+    setVariant("info");
+    setNum(getRandomInt(100));
+    setInput("= ");
+    setCanSubmit(false);
+    setIsGameOver(false);
+  }
+
+  function getRandomInt(max: number) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
   function click(key: string) {
     switch (key) {
       case "x":
         if (canSubmit) {
           setCanSubmit(false);
-          setMessage("");
+          setMessage("Enter another prime number...");
+          setVariant("info");
           setInput(input + " x ");
         }
         break;
       case "submit":
         if (canSubmit) {
           setCanSubmit(false);
-          if (verify(input, parseInt(num))) {
+          setIsGameOver(true);
+          if (verify(input, num)) {
             setMessage("Correct!");
             setVariant("success");
+            setPoints(points + 10);
+          } else {
+            setPoints(points - 10);
           }
         }
         break;
@@ -50,9 +70,8 @@ const App = () => {
 
     parts.forEach(part => {
       var num = parseInt(part);
-      if (isPrime(num)) {
-        product *= num;
-      } else {
+      product *= num;
+      if (!isPrime(num)) {
         errors += "" + num + " is not a prime number.\r\n";
       }
     });
@@ -74,7 +93,7 @@ const App = () => {
   return (
     <div className="App">
       <MainMenu />
-      <GameStats time="20" points="1200"/>
+      <GameStats time={30} points={points}/>
       <div>
         <div className="AlertBox">
           { message && <Alert variant={variant}>{message}</Alert> }
@@ -82,7 +101,12 @@ const App = () => {
         <BigNum num={num}/>
       </div>
       <KeyboardInput input={input}/>
-      <Keyboard click={click}/>
+      { !isGameOver && <Keyboard click={click}/> }
+      { isGameOver && 
+        <div className="BottomDrawer">
+          <Button variant="success" size="lg" block onClick={restart}>Play Again</Button> 
+        </div>
+      }
     </div>
   );
 }
