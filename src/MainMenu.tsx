@@ -1,7 +1,8 @@
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-function MainMenu() {
+const MainMenu = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#home">Prime Factors</Navbar.Brand>
