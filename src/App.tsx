@@ -6,6 +6,7 @@ import MainMenu from './MainMenu';
 import Fractions from "./Fractions";
 import Factors from "./Factors";
 import About from "./About";
+import Home from "./Home";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <MainMenu />
         <Switch>
           <Route exact path="/">
-            <Factors />
+            <Home />
           </Route>
           <Route path="/factors">
             <Factors />

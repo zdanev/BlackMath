@@ -12,7 +12,12 @@ const Fractions = () => {
             <GameStats time={30} points={points}/>
             <div>
                 <div className="AlertBox">
-                    { message && <Alert variant={variant}>{message}</Alert> }
+                    { message &&
+                        <Alert variant={variant}>
+                            <Alert.Heading>Fractions</Alert.Heading>
+                            {message}
+                        </Alert>
+                    }
                 </div>
             </div>
         </div>

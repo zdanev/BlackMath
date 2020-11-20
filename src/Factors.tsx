@@ -82,7 +82,12 @@ const Factors = () => {
         <GameStats time={30} points={points}/>
         <div>
             <div className="AlertBox">
-            { message && <Alert variant={variant}>{message}</Alert> }
+            { message &&
+              <Alert variant={variant}>
+                <Alert.Heading>Prime Fractors</Alert.Heading>
+                {message}
+              </Alert>
+            }
             </div>
             <BigNum num={num}/>
         </div>
