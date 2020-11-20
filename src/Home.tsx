@@ -6,7 +6,7 @@ const Home = () => {
         <div>
             <Alert variant="primary">
                 <Alert.Heading>Install</Alert.Heading>
-                Press the <strong>Install</strong> button above to add the app to your home screen.
+                Press the <strong>Add to Home Screen</strong> button to add the app to your home screen.
             </Alert>
 
             <Alert variant="dark">

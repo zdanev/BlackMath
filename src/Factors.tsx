@@ -79,19 +79,11 @@ const Factors = () => {
 
   return (
       <div className="Factors">
-        <GameStats time={30} points={points}/>
-        <div>
-            <div className="AlertBox">
-            { message &&
-              <Alert variant={variant}>
-                <Alert.Heading>Prime Fractors</Alert.Heading>
-                {message}
-              </Alert>
-            }
-            </div>
-            <BigNum num={num}/>
-        </div>
-        <KeyboardInput input={input}/>
+        <Alert variant={variant}>
+          <Alert.Heading>Prime Fractors</Alert.Heading>
+          {message}
+        </Alert>
+        <BigNum num={num} input={input}/>
         { !isGameOver && <Keyboard click={click}/> }
         { isGameOver && 
             <div className="BottomDrawer">
