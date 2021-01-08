@@ -1,17 +1,19 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
-import { preProcessFile } from 'typescript';
 
 interface BigNumProps {
-    num: number;
-    input: string;
+    num?: number;
+    num1?: number;
+    operator?: string;
+    num2?: number;
+    input?: string;
 }
 
 const BigNum = (props: BigNumProps) => {
     return (
         <div className="BigNum">
             <Alert variant="dark">
-                {props.num}
+                {props.num} {props.num1} {props.operator} {props.num2}
                 <hr/>
                 <div className="KeyboardInput">{props.input}</div>
             </Alert>

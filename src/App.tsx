@@ -7,6 +7,8 @@ import Fractions from "./Fractions";
 import Factors from "./Factors";
 import About from "./About";
 import Home from "./Home";
+import Division from './Division';
+import Multiplication from "./Multiplication";
 
 const App = () => {
   return (
@@ -22,6 +24,12 @@ const App = () => {
           </Route>          
           <Route path="/fractions">
             <Fractions />
+          </Route>
+          <Route path="/division">
+            <Division />
+          </Route>
+          <Route path="/multiplication">
+            <Multiplication />
           </Route>
           <Route path="/about">
             <About />
