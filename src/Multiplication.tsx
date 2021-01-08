@@ -4,7 +4,7 @@ import Keyboard from "./Keyboard";
 import BigNum from './BigNum';
 
 const Multiplication = () => {
-    const [message, setMessage] = useState<string>("Let's play a game of multiplication...");
+    const [message, setMessage] = useState<string>("What is the product of the two numbers below?");
     const [variant, setVariant] = useState<string>("info");
     const [points, setPoints] = useState<number>(0);
 

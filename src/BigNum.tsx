@@ -13,7 +13,7 @@ const BigNum = (props: BigNumProps) => {
     return (
         <div className="BigNum">
             <Alert variant="dark">
-                {props.num} {props.num1} {props.operator} {props.num2}
+                {props.num} {props.num1} <span className="Operator">{props.operator}</span> {props.num2}
                 <hr/>
                 <div className="KeyboardInput">{props.input}</div>
             </Alert>

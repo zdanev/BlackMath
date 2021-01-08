@@ -4,7 +4,7 @@ import Keyboard from "./Keyboard";
 import BigNum from './BigNum';
 
 const Division = () => {
-    const [message, setMessage] = useState<string>("Let's play a game of division...");
+    const [message, setMessage] = useState<string>("What is the quotient of the numbers below?");
     const [variant, setVariant] = useState<string>("info");
     const [points, setPoints] = useState<number>(0);
 
@@ -16,7 +16,7 @@ const Division = () => {
                     {message}
                 </Alert>
 
-                <BigNum num1={24} operator="/" num2={3} input="=" />
+                <BigNum num1={24} operator=":" num2={3} input="=" />
  
 
 

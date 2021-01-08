@@ -8,7 +8,7 @@ import Button from "react-bootstrap/esm/Button";
 import MathUtils from "./MathUtils";
 
 const Factors = () => {
-  const [message, setMessage] = useState<string>("Let's play a game of prime factors...");
+  const [message, setMessage] = useState<string>("Break the number below into prime factors...");
   const [variant, setVariant] = useState<string>("info");
   const [num, setNum] = useState<number>(MathUtils.getRandomInt(100));
   const [input, setInput] = useState<string>("= ");

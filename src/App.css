@@ -4,6 +4,7 @@ body { background-image: url("resources/numbers-background.png"); }
 .GameStats .Time { font-weight: bold; }
 .GameStats .Points { float: right; font-weight: bold; }
 .BigNum { font-size: 48pt; font-weight: bold; text-align: center; padding: 0px; width: 100%; }
+.Operator { color: navy; }
 .KeyboardInput { font-size: 16pt; font-weight: bold; padding: 0px; text-align: left;}
 .Keyboard { position: absolute; bottom: 0px; width: 100%; padding: 0px; }
 .Keyboard div { text-align: center; }
